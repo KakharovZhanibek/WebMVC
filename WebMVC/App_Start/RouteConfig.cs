@@ -17,6 +17,11 @@ namespace WebMVC
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                //constraints: new { id=@"\d+"}
+            );
+            routes.MapRoute(
+                name: "Default2",
+                url: "{controller}/{action}/{id1}/{id2}"
             );
         }
     }

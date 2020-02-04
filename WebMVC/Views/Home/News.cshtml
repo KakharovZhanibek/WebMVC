@@ -4,13 +4,15 @@
 }
 
 <h2>News</h2>
-<h1>
+<br />
+<p>
     @foreach (var item in ViewBag.Data)
     {
         <h3>@item.Id</h3>
         <h3>@item.Name</h3>
         <h3>@item.Population</h3>
     }
-</h1>
+</p>
+
 
 

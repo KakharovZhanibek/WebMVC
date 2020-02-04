@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h1>@ViewData["Result"]</h1>
+@{
+    string result = ViewData["Result"].ToString();
+    string[] stringNumbers = result.Split(' ');
+    List<int> numbers=new List<int>();
+    for (int i = 0; i < stringNumbers.Length; i++)
+    {
+        numbers.Add(Convert.ToInt32(stringNumbers[i]));
+    }
+    ViewData["NewResult"] = numbers.Max();
+    ViewData["NewResult"] += " "+numbers.Average().ToString();
+}
+<h2>@ViewData["NewResult"] </h2>
